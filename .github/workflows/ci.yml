@@ -33,3 +33,9 @@ jobs:
       - run: poetry install
       - name: Test with tox
         run: poetry run tox
+      - run: ls -al
+      - name: Combine coverage
+        run: poetry run coverage combine
+      - name: Generate coverage.xml
+        run: poetry run coverage xml
+      - uses: codecov/codecov-action@v1

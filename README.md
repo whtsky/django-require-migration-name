@@ -1,6 +1,6 @@
 # django-require-migration-name
 
-require `name` in `makemigrations`
+require `name` in Django's `makemigrations`
 
 ## Installation
 
