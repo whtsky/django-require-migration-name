@@ -1,0 +1,35 @@
+on:
+  push:
+  pull_request:
+name: check
+jobs:
+  codestyle:
+    name: codestyle
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: actions/setup-python@v1
+        with:
+          python-version: "3.9"
+          architecture: "x64"
+      - uses: snok/install-poetry@v1.1.1
+      - run: poetry install
+      - run: poetry run black --check .
+      - run: poetry run isort . --check --diff
+
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.6, 3.7, 3.8, 3.9]
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+      - uses: snok/install-poetry@v1.1.1
+      - run: poetry install
+      - name: Test with tox
+        run: poetry run tox
