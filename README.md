@@ -1,5 +1,7 @@
 # django-require-migration-name
 
+[![codecov](https://codecov.io/gh/whtsky/django-require-migration-name/branch/master/graph/badge.svg?token=WXUN262JEF)](https://codecov.io/gh/whtsky/django-require-migration-name)
+
 require `name` in Django's `makemigrations`
 
 ## Installation
