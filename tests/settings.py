@@ -22,7 +22,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "tests",
-    "django-require-migration-name",
+    "django_require_migration_name",
 ]
 
 MIDDLEWARE = [

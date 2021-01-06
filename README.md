@@ -12,13 +12,13 @@ pip install django-require-migration-name
 
 ## Usage
 
-Add `django-require-migration-name` into your `INSTALLED_APPS`:
+Add `django_require_migration_name` into your `INSTALLED_APPS`:
 
 ```python
 INSTALLED_APPS = [
     # ...
 
-    'django-require-migration-name',
+    'django_require_migration_name',
 ]
 ```
 
