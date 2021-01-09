@@ -30,3 +30,13 @@ CommandError: Please provide name for migration file(s).
 >> python manage.py makemigrations -n name_here
 No changes detected
 ```
+
+## Changelog
+
+### v0.2.0
+
+- fix: use underscore in package folder name
+
+### v0.1.0
+
+- Initial release
